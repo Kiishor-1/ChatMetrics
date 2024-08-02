@@ -1,0 +1,79 @@
+  .user-profile {
+    /* width: 100vw; */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3b82f6;
+    color: white;
+  }
+
+  .profile-picture {
+    border-radius: 50%;
+    width: 50%;
+  }
+
+  .user-stuffs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+  }
+
+  .user-header {
+    flex: 3;
+    text-align: center;
+  }
+
+  .user-info-sections {
+    min-height: 450px;
+    flex: 4;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.5rem;
+    /* border: 2px solid white; */
+  }
+
+  .user-info {
+    background-color: white;
+    color: black;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.527);
+    min-height: 225px;
+    transition: transform 0.3s;
+  }
+
+  .user-info:hover {
+    transform: translateY(-10px);
+  }
+
+  @media screen and (max-width:992px) {
+    .user-profile {
+      padding: 1rem;
+    }
+
+    .user-stuffs {
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .user-info-sections {
+      width: 100%;
+      padding: 5rem;
+    }
+  }
+
+  @media screen and (max-width:460px) {
+    .user-info-sections {
+      /* width: 100%; */
+      grid-template-rows: repeat(4, 1fr);
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .user-header {
+      width: 100%;
+    }
+  }

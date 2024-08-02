@@ -1,0 +1,16 @@
+.Header {
+  background-color: rgb(40, 39, 39);
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.community {
+  margin: 0;
+}
+.pipe{
+  font-size: 2rem;
+}

@@ -1,0 +1,56 @@
+/* CommunityCard.css */
+.community-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+    max-width: 300px;
+    margin:12px;
+    padding: 20px;
+  }
+  
+  .community-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .community-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .community-info {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .community-name {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  .community-description {
+    font-size: 1rem;
+    color: #666;
+    margin: 10px 0;
+  }
+  
+  .community-join-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .community-join-button:hover {
+    background-color: #0056b3;
+  }
+  

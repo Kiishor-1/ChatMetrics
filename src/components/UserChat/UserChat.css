@@ -1,0 +1,30 @@
+/* UserChat.css */
+.chat-input {
+  display: flex;
+  padding: 10px;
+  background-color: #23272a;
+  border-top: 1px solid #444;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  background-color: #40444b;
+  color: #ffffff;
+}
+
+.chat-input button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #7289da;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.chat-input button:hover {
+  background-color: #5b6eae;
+}

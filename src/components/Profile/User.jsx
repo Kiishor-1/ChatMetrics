@@ -50,10 +50,10 @@ const User = () => {
                     <div className="user-basic-info">
                         <h2>{username}</h2>
                         <p>{role.toUpperCase()}</p>
-                        <div className="user-details">
+                        {/* <div className="user-details">
                             <p>Education: {education || '-'}</p>
                             <p>Location: {location || '-'}</p>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
 

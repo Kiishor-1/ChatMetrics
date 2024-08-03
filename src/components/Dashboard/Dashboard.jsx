@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchCommunityMetrics} from '../../store/communitySlice';
+import { fetchCommunityMetrics } from '../../store/communitySlice';
 import MemberChart from '../Charts/MemberChart';
 import GrowthChart from '../Charts/GrowthChart';
 import EngagementChart from '../Charts/EngagementChart';
@@ -28,9 +28,9 @@ const Dashboard = ({ communityId }) => {
     <>
       <Header community={communityData?.name || 'Community'} />
       <div className="Dashboard">
-        <div className="" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '2rem' }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '1rem' }}>
           <h2>Community Metrics</h2>
-          <Link to={`/admin-chat`} style={{ cursor: 'pointer', listStyle: 'none', color: 'white' }}>
+          <Link to={`/admin-chat`} style={{ cursor: 'pointer', textDecoration: 'none', "color":"white"}}>
             Go to Community
           </Link>
         </div>

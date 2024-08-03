@@ -70,4 +70,6 @@ button:focus-visible {
 body{
   margin: 0;
   padding: 0;
+  /* min-width: 425px;
+  overflow-x: hidden; */
 }

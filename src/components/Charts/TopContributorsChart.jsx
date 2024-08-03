@@ -13,7 +13,7 @@ const TopContributorsChart = ({ topContributors }) => {
     labels: validTopContributors.map((user) => user.username || 'Unknown'),
     datasets: [
       {
-        label: 'Contributors',
+        label: 'Contribution',
         data: validTopContributors.map((user) => user.messageCount || 0),
         backgroundColor: [
           '#ff6384',

@@ -1,25 +1,10 @@
-// import { Link } from "react-router-dom";
-
-// export default function Home() {
-//   return (
-//     <div>
-//       <h1>Welcome Home | Telegram Trends</h1>
-//       <Link to="/dashboard">
-//         Dashbaord
-//       </Link>
-//     </div>
-//   )
-// }
-
 
 // Home.jsx
 import './Home.css'; 
-// import Navbar from '../components/common/Navbar';
 
 const Home = () => {
     return (
       <div className="home-container">
-        {/* <Navbar /> */}
         <HeroSection />
         <InformationSection />
         <Footer />
@@ -29,7 +14,7 @@ const Home = () => {
     
   const HeroSection = () => (
     <section className="hero-section">
-      <h1>Welcome to MyWebsite</h1>
+      <h1>Welcome to ChatMetrics</h1>
       <p>Your gateway to amazing services and information.</p>
       <button className="hero-button">Get Started</button>
     </section>
@@ -67,7 +52,7 @@ const InformationSection = () => (
 const Footer = () => (
   <footer className="footer">
     <div className="footer-content">
-      <p>&copy; 2024 Telegram Trends | All rights reserved.</p>
+      <p>&copy; 2024 ChatMetrics | All rights reserved.</p>
       <div className="footer-links">
         <a href="#privacy">Privacy Policy</a>
         <a href="#terms">Terms of Service</a>

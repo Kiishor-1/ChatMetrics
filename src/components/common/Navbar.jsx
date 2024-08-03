@@ -25,7 +25,7 @@ const Navbar = () => {
       <div className="navbar-container">
         <div className="navbar-brand">
           <Link to={"/"} style={{ textDecoration: "none", color: "white" }}>
-            Telegram Trends
+          ChatMetrics
           </Link>
         </div>
         <div className="navbar-toggle" onClick={toggleMenu}>

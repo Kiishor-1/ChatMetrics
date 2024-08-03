@@ -54,8 +54,8 @@ const Footer = () => (
     <div className="footer-content">
       <p>&copy; 2024 ChatMetrics | All rights reserved.</p>
       <div className="footer-links">
-        <a href="#privacy">Privacy Policy</a>
-        <a href="#terms">Terms of Service</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
       </div>
     </div>
   </footer>

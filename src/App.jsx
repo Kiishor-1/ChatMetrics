@@ -15,7 +15,7 @@ import Navbar from './components/common/Navbar';
 import { Toaster } from 'react-hot-toast';
 import NotFound from './components/common/NotFound';
 import { useSelector } from 'react-redux';
-// import Footer from './components/common/Footer';
+import ProtectedRoute from './components/common/ProtectedRoute';
 
 function App() {
   return (
@@ -26,13 +26,13 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/dashboard" element={<Dashboard communityId={"66ad1946a950635af6140247"} />} />
+            <Route path="/dashboard" element={<ProtectedRoute element={<Dashboard communityId={"66ad1946a950635af6140247"} />} />} />
             <Route path="/profile/:id" element={<User />} />
             <Route path="/admin-chat" element={<AdminChat communityId={"66ad1946a950635af6140247"} />} />
             <Route path="/community" element={<CommunityList />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/communities/:communityId/chat" element={<ProtectedUserChat />} />
+            <Route path="/communities/:communityId/chat" element={<ProtectedRoute element={<UserChatWrapper />} />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           {/* <Footer/> */}
@@ -42,12 +42,8 @@ function App() {
   );
 }
 
-const ProtectedUserChat = () => {
+const UserChatWrapper = () => {
   const { user } = useSelector((state) => state.user);
-
-  if (!user) {
-    return <Navigate to="/login" />;
-  }
 
   return <UserChat communityId={"66ad1946a950635af6140247"} userId={user._id} />;
 };

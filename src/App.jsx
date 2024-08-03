@@ -1,7 +1,7 @@
 import './App.css';
 import Dashboard from './components/Dashboard/Dashboard';
 import './utils/chartSetup';
-import { Route, Routes, BrowserRouter ,Navigate} from 'react-router-dom';
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import User from './components/Profile/User';
 import Home from './pages/Home';
 import AdminChat from './pages/AdminChat';
@@ -28,7 +28,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/dashboard" element={<ProtectedRoute element={<Dashboard communityId={"66ad1946a950635af6140247"} />} />} />
             <Route path="/profile/:id" element={<User />} />
-            <Route path="/admin-chat" element={<AdminChat communityId={"66ad1946a950635af6140247"} />} />
+            <Route path="/admin-chat" element={<ProtectedRoute element={<AdminChat communityId={"66ad1946a950635af6140247"} />} />} />
             <Route path="/community" element={<CommunityList />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />

@@ -36,10 +36,10 @@ const TopContributorsChart = ({ topContributors }) => {
 
     const index = elements[0].index;
     const user = validTopContributors[index];
-    console.log(user)
+    // console.log(user)
 
     if (user && user.username) {
-      console.log(user);
+      // console.log(user);
       navigate(`/profile/${user.userId}`);
     }
   };

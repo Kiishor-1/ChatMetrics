@@ -4,12 +4,13 @@ import { useParams } from 'react-router-dom';
 import './User.css';
 import { USER_ENDPOINTS } from '../../services/api';
 
-const { GET_USER} = USER_ENDPOINTS;
+const { GET_USER } = USER_ENDPOINTS;
 
 const User = () => {
     const { id } = useParams(); // Assume userId is passed in the route
 
     const [user, setUser] = useState(null);
+    const [memberData, setMemberData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
@@ -19,7 +20,9 @@ const User = () => {
             try {
                 const response = await fetch(GET_USER(id)); // Replace with your API endpoint
                 const data = await response.json();
-                setUser(data);
+                // console.log(data);
+                setMemberData(data.memberData);
+                setUser(data.user);
             } catch (err) {
                 setError(err.message);
             } finally {
@@ -32,11 +35,31 @@ const User = () => {
         }
     }, [id]);
     //   console.log(user)
+    console.log(memberData)
     if (loading) return <div>Loading...</div>;
     if (error) return <div>Error: {error}</div>;
     if (!user) return <div>No user data available</div>;
 
-    const { username, bio, role, education, location, goals, motivations, concerns } = user;
+    const { username, bio, role, goals, lastActive, concerns } = user;
+    const isoDate = lastActive;
+    const lastActiveDate = new Date(isoDate).toLocaleString('en-US', {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: 'numeric',
+        minute: 'numeric',
+        hour12: true,
+    });
+    const memberSince = memberData.joinDate;
+    const memberSinceDate = new Date(memberSince).toLocaleString('en-US', {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: 'numeric',
+        minute: 'numeric',
+        hour12: true,
+    });
+
 
     return (
         <div className="user-profile">
@@ -67,8 +90,9 @@ const User = () => {
                         <p>{goals || 'No goals available.'}</p>
                     </div>
                     <div className="user-info">
-                        <h3>Motivations</h3>
-                        <p>{motivations || 'No motivations available.'}</p>
+                        <h3>Activity</h3>
+                        <p>Last Active : {<span style={{ "fontWeight": "600" }}>{lastActiveDate}</span> || 'No motivations available.'}</p>
+                        <p>Member Since :{memberSinceDate} </p>
                     </div>
                     <div className="user-info">
                         <h3>Concerns</h3>

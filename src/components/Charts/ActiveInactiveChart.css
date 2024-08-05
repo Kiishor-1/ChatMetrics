@@ -1,0 +1,13 @@
+.active-inactive-chart {
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .active-inactive-chart h3 {
+    margin-bottom: 1rem;
+    color: var(--text-color);
+  }
+  

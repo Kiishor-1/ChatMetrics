@@ -19,7 +19,7 @@ const CommunityList = () => {
   return (
     <div style={{"padding":"20px"}}>
       <h2>Communities</h2>
-      <div style={{"display":"flex","flexWrap":"wrap","alignItems":"center"}}>
+      <div style={{"display":"flex","flexWrap":"wrap","alignItems":"center","justifyContent":"center"}}>
         {communities.map((community) => (
           <CommunityCard key={community._id} community={community} />
         ))}

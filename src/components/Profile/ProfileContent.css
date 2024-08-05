@@ -1,0 +1,25 @@
+.profile-content {
+    padding: 20px;
+    width: 70%;
+  }
+  
+  .profile-info,
+  .profile-bio {
+    margin-bottom: 20px;
+  }
+  
+  .profile-info label,
+  .profile-bio label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .profile-info input,
+  .profile-bio textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+  }
+  

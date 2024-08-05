@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import { Pie } from 'react-chartjs-2';
 import { useNavigate } from 'react-router-dom';
-// import { Chart } from 'chart.js';
 import { useRef } from 'react';
 
 const TopContributorsChart = ({ topContributors }) => {

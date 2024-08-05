@@ -1,0 +1,17 @@
+.profile-container {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    min-height: 80%;
+    background-color: #fff;
+    border: 5px rgb(37, 123, 203) solid;
+    border-radius: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  @media screen and (max-width:768px) {
+    .profile-container{
+      width: 95%;
+    }
+  }

@@ -1,0 +1,33 @@
+.profile-sidebar {
+    background-color: #e0f7fa;
+    padding: 20px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid #e0e0e0;
+  }
+  
+  .profile-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  
+  .edit-profile-button,
+  .account-settings-button {
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .edit-profile-button:hover,
+  .account-settings-button:hover {
+    background-color: #0056b3;
+  }
+  

@@ -5,6 +5,7 @@ import './User.css';
 import { USER_ENDPOINTS } from '../../services/api';
 
 const { GET_USER } = USER_ENDPOINTS;
+import ProfileContainer from './ProfileContainer';
 
 const User = () => {
     const { id } = useParams(); // Assume userId is passed in the route
@@ -40,7 +41,7 @@ const User = () => {
     if (error) return <div>Error: {error}</div>;
     if (!user) return <div>No user data available</div>;
 
-    const { username, bio, role, goals, lastActive, concerns } = user;
+    const {lastActive } = user;
     const isoDate = lastActive;
     const lastActiveDate = new Date(isoDate).toLocaleString('en-US', {
         year: 'numeric',
@@ -51,7 +52,7 @@ const User = () => {
         hour12: true,
     });
     const memberSince = memberData.joinDate;
-    const memberSinceDate = new Date(memberSince).toLocaleString('en-US', {
+    const memberSinceDate = new Date(memberSince).toLocaleString('en-IN', {
         year: 'numeric',
         month: '2-digit',
         day: '2-digit',
@@ -62,44 +63,49 @@ const User = () => {
 
 
     return (
-        <div className="user-profile">
-            <div className="user-stuffs">
-                <div className="user-header">
-                    <img
-                        className="profile-picture"
-                        src={`https://ui-avatars.com/api/?name=${encodeURIComponent(username)}`}
-                        alt={`${username}'s profile`}
-                    />
-                    <div className="user-basic-info">
-                        <h2>{username}</h2>
-                        <p>{role.toUpperCase()}</p>
-                        {/* <div className="user-details">
-                            <p>Education: {education || '-'}</p>
-                            <p>Location: {location || '-'}</p>
-                        </div> */}
-                    </div>
-                </div>
+        // <div className="user-profile">
+        //     <div className="user-stuffs">
+        //         <div className="user-header">
+        //             <img
+        //                 className="profile-picture"
+        //                 src={`https://ui-avatars.com/api/?name=${encodeURIComponent(username)}`}
+        //                 alt={`${username}'s profile`}
+        //             />
+        //             <div className="user-basic-info">
+        //                 <h2>{username}</h2>
+        //                 <p>{role.toUpperCase()}</p>
+        //                 {/* <div className="user-details">
+        //                     <p>Education: {education || '-'}</p>
+        //                     <p>Location: {location || '-'}</p>
+        //                 </div> */}
+        //             </div>
+        //         </div>
 
-                <div className="user-info-sections">
-                    <div className="user-info">
-                        <h3>Bio</h3>
-                        <p>{bio || 'No bio available.'}</p>
-                    </div>
-                    <div className="user-info">
-                        <h3>Goals</h3>
-                        <p>{goals || 'No goals available.'}</p>
-                    </div>
-                    <div className="user-info">
-                        <h3>Activity</h3>
-                        <p>Last Active : {<span style={{ "fontWeight": "600" }}>{lastActiveDate}</span> || 'No motivations available.'}</p>
-                        <p>Member Since :{memberSinceDate} </p>
-                    </div>
-                    <div className="user-info">
-                        <h3>Concerns</h3>
-                        <p>{concerns || 'No concerns available.'}</p>
-                    </div>
-                </div>
-            </div>
+        //         <div className="user-info-sections">
+        //             <div className="user-info">
+        //                 <h3>Bio</h3>
+        //                 <p>{bio || 'No bio available.'}</p>
+        //             </div>
+        //             <div className="user-info">
+        //                 <h3>Goals</h3>
+        //                 <p>{goals || 'No goals available.'}</p>
+        //             </div>
+        //             <div className="user-info">
+        //                 <h3>Activity</h3>
+        //                 <p>Last Active : {<span style={{ "fontWeight": "600" }}>{lastActiveDate}</span> || 'No motivations available.'}</p>
+        //                 <p>Member Since :{memberSinceDate} </p>
+        //             </div>
+        //             <div className="user-info">
+        //                 <h3>Concerns</h3>
+        //                 <p>{concerns || 'No concerns available.'}</p>
+        //             </div>
+        //         </div>
+        //     </div>
+        // </div>
+        <div className="ui">
+            <div className="first"></div>
+            <div className="second"></div>
+            <ProfileContainer user={user} lastActiveDate={lastActiveDate} memberSince={memberSinceDate}/>
         </div>
     );
 };

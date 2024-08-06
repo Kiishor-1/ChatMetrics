@@ -16,6 +16,7 @@ import { Toaster } from 'react-hot-toast';
 import NotFound from './components/common/NotFound';
 import { useSelector } from 'react-redux';
 import ProtectedRoute from './components/common/ProtectedRoute';
+import EditUser from './components/Profile/EditUser';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/dashboard" element={<ProtectedRoute element={<Dashboard communityId={"66ad1946a950635af6140247"} />} />} />
             <Route path="/profile/:id" element={<User />} />
+            <Route path="/edit-user/:id" element={<EditUser />} />
             <Route path="/admin-chat" element={<ProtectedRoute element={<AdminChat communityId={"66ad1946a950635af6140247"} />} />} />
             <Route path="/community" element={<CommunityList />} />
             <Route path="/signup" element={<Signup />} />

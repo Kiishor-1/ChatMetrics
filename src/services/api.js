@@ -13,11 +13,12 @@ export const AUTH_ENDPOINTS = {
 
 export const COMMUNITY_ENDPOINTS = {
   FETCH_COMMUNITY: `${BASE_URL}/api/community`,
-  FETCH_COMMUNITY_METRICS:(communityId)=> `${BASE_URL}/api/community/${communityId}/metrics`,
+  FETCH_COMMUNITY_METRICS: (communityId) => `${BASE_URL}/api/community/${communityId}/metrics`,
   JOIN_COMMUNITY: (communityId) => `${BASE_URL}/api/community/${communityId}/join`,
-  COMMUNITY_MEMBERS:(communityId)=>`${BASE_URL}/api/community/${communityId}/members`
+  COMMUNITY_MEMBERS: (communityId) => `${BASE_URL}/api/community/${communityId}/members`
 };
 
 export const USER_ENDPOINTS = {
-  GET_USER : (id)=> `${BASE_URL}/api/users/${id}`,
+  GET_USER: (id) => `${BASE_URL}/api/users/${id}`,
+  UPDATE_USER:`${BASE_URL}/api/users`,
 }

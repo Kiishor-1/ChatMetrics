@@ -10,7 +10,7 @@ function ProfileContent({ user,memberSince }) {
       </div>
       <div className="profile-bio">
         <label htmlFor="bio">Bio:</label>
-        <textarea id="bio" rows="4" value="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime odio repellat mollitia expedita! Atque soluta nostrum pariatur magni voluptatibus repellat,aperiam vitae vel, saepe dolorem ab, earum facere! Quod, unde." readOnly />
+        <textarea id="bio" rows="4" value={user.bio || "the user of ChatMetrics"} readOnly />
       </div>
       <div className="">
         <p> <strong>Member Since </strong><small>{memberSince}</small></p>

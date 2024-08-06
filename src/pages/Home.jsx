@@ -1,5 +1,6 @@
 
 // Home.jsx
+import { Link } from 'react-router-dom';
 import './Home.css'; 
 
 const Home = () => {
@@ -16,7 +17,7 @@ const Home = () => {
     <section className="hero-section">
       <h1>Welcome to ChatMetrics</h1>
       <p>Your gateway to amazing services and information.</p>
-      <button className="hero-button">Get Started</button>
+      <Link to={"/community"} className="hero-button">Get Started</Link>
     </section>
   );
   
